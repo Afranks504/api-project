@@ -1,10 +1,10 @@
-require('module-alias/register');
+import 'module-alias/register';
 
-const fs = require('fs');
+import { readdirSync } from 'fs';
 
-module.exports = (app) => {
+export default (app) => {
   // require all API endpoints
-  fs.readdirSync(`${__dirname}/api/`).forEach((file) => {
+  readdirSync(`${__dirname}/api/`).forEach((file) => {
     require(`./api/${file.substr(0, file.indexOf('.'))}`)(app);
   });
 };
