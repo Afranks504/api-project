@@ -15,5 +15,5 @@ module.exports = {
     zipcode: 'zip',
   },
 
-  APIkey: '<Your-API-key>',
+  APIkey: 'e76d659427500cb282d3910fd17e5943',
 };
